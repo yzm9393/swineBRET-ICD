@@ -1,6 +1,6 @@
 # SwineBERT-ICD: A Weak Supervision Model for Swine Health Classification
 
-This repository documents the complete methodology and source code for the SwineBERT-ICD project, submitted as the final Major Research Project for the DATA*6700 course at the University of Guelph by Zimo Yang (Summer 2025). The project develops and validates a deep learning pipeline for the multi-label classification of unstructured swine clinical records into standardized ICD-11-aligned syndromes.
+This repository documents the complete methodology and source code for the **SwineBERT-ICD** project, submitted as the final Major Research Project for the DATA*6700 course at the University of Guelph by Zimo Yang (Summer 2025). The project develops and validates a deep learning pipeline for the multi-label classification of unstructured swine clinical records into standardized ICD-11-aligned syndromes.
 
 ## Project Overview
 
