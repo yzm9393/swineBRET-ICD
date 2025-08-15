@@ -36,9 +36,6 @@ The project follows a multi-phase workflow, from initial data preparation to the
 
 ```
 .
-├── teacher_models_calibrated/   # Saved binary "teacher" models
-├── final_swinebert_model/       # The final, fine-tuned SwineBERT-ICD model
-├── data/                        # Contains raw, processed, and annotated data files
 ├── 01_Data_Preparation_for_Annotation.ipynb    # Notebook for cleaning and splitting the raw data
 ├── 02_Annotation_Modeling.ipynb      # Notebook for training the simple baseline model
 ├── 03_Train_Teacher_Models.ipynb  # Notebook to train the calibrated "teacher" models
