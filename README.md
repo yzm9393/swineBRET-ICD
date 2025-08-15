@@ -39,12 +39,11 @@ The project follows a multi-phase workflow, from initial data preparation to the
 ├── teacher_models_calibrated/   # Saved binary "teacher" models
 ├── final_swinebert_model/       # The final, fine-tuned SwineBERT-ICD model
 ├── data/                        # Contains raw, processed, and annotated data files
-├── 01_Data_Preparation.ipynb    # Notebook for cleaning and splitting the raw data
-├── 02_Baseline_Model.ipynb      # Notebook for training the simple baseline model
+├── 01_Data_Preparation_for_Annotation.ipynb    # Notebook for cleaning and splitting the raw data
+├── 02_Annotation_Modeling.ipynb      # Notebook for training the simple baseline model
 ├── 03_Train_Teacher_Models.ipynb  # Notebook to train the calibrated "teacher" models
 ├── 04_Pseudo_Labeling.ipynb     # Notebook to generate the weakly labeled dataset
-├── 05_Train_Final_SwineBERT.ipynb # Notebook to fine-tune the final model
-├── 06_Final_Evaluation.ipynb      # Notebook to run the final evaluation on the test set
+├── 05_Train_Final_SwineBERT.ipynb # Notebook to fine-tune the final model and evaluation on the test set
 └── README.md                    # This file
 ```
 
@@ -68,12 +67,11 @@ This project uses a dedicated Conda environment to manage dependencies.
 
 To reproduce the results, run the Jupyter Notebooks in the following order:
 
-1. `01_Data_Preparation.ipynb`: Cleans the raw data and creates the initial train/test splits and the 2,000-record sample for annotation
-2. `02_Baseline_Model.ipynb`: Trains a simple baseline model on the expert-annotated data to establish a performance benchmark
+1. `01_Data_Preparation_for_Annotation.ipynb`: Cleans the raw data and creates the initial train/test splits and the 2,000-record sample for annotation
+2. `02_Annotation_Modeling.ipynb`: Trains a simple baseline model on the expert-annotated data to establish a performance benchmark
 3. `03_Train_Teacher_Models.ipynb`: Trains the 11 calibrated binary "teacher" models and saves them to the `teacher_models_calibrated/` directory
 4. `04_Pseudo_Labeling.ipynb`: Uses the saved teacher models to generate the `pseudo_labeled_dataset.csv`
-5. `05_Train_Final_SwineBERT.ipynb`: Fine-tunes the final `SwineBERT-ICD` model on the pseudo-labeled data and saves it to the `final_swinebert_model/` directory
-6. `06_Final_Evaluation.ipynb`: Loads the final model and evaluates its performance on the held-out, expert-annotated test set
+5. `05_Train_Final_SwineBERT.ipynb`: Fine-tunes the final `SwineBERT-ICD` model on the pseudo-labeled data and saves it to the `final_swinebert_model/` directory; Loads the final model and evaluates its performance on the held-out, expert-annotated test set
 
 ## Final Results
 
